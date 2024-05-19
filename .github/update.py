@@ -148,7 +148,7 @@ def create_md():
         if percent < 0.7:
             return "$\\color{red}{\\textsf{" + str(round(percent * 100, 1)) + " \\%" + "}}$"
         elif percent < 0.9:
-            return "$\\color{yellow}{\\textsf{" + str(round(percent * 100, 1)) + " \\%" + "}}$"
+            return "$\\color{orange}{\\textsf{" + str(round(percent * 100, 1)) + " \\%" + "}}$"
         else:
             return "$\\color{green}{\\textsf{" + str(round(percent * 100, 1)) + " \\%" + "}}$"
 
