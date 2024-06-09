@@ -115,3 +115,4 @@ This tables shows the current translation progress of VCMI. Contains only the st
 |object-pack||x|||||||||||||||
 |tavern-invite|||||x||||||||||||
 |ultimate-balance|||||||||||||||||
+|pvp-balance|||||||||||||||||
