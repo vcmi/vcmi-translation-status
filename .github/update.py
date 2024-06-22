@@ -201,7 +201,7 @@ def create_md():
     tmp = get_mod_translations(languages_translate)
     df = pd.DataFrame(columns=["Mod"] + languages_translate)
     for mod in tmp:
-        df = pd.concat([df, pd.DataFrame({"Mod": "[" + mod + "](https://github.com/vcmi-mods/" + mod + ")"} | {x:["x" if x in tmp[mod] else ""] for x in languages_translate})], ignore_index=True)
+        df = pd.concat([df, pd.DataFrame({"Mod": "[" + mod + "](https://github.com/vcmi-mods/" + mod.replace(" ", "%20") + ")"} | {x:["x" if x in tmp[mod] else ""] for x in languages_translate})], ignore_index=True)
     df = df.T.reset_index().T
     md.new_table(columns=df.shape[1], rows=df.shape[0], text=df.to_numpy().flatten(), text_align='center')
 
