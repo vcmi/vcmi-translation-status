@@ -41,9 +41,9 @@ This tables shows the current translation progress of VCMI. Contains only the st
 |[tok](https://github.com/vcmi-mods/tok)||x|||||||||||||||
 |[elemental-nodes](https://github.com/vcmi-mods/elemental-nodes)||x|||||||||||||||
 |[forge](https://github.com/vcmi-mods/forge)||x|||x||||x||||||||
-|[ai trace](https://github.com/vcmi-mods/ai trace)|||||||||||||||||
-|[mac demo support](https://github.com/vcmi-mods/mac demo support)|||||||||||||||||
-|[ai testing maps](https://github.com/vcmi-mods/ai testing maps)|||||||||||||||||
+|[ai trace](https://github.com/vcmi-mods/ai-trace)|||||||||||||||||
+|[mac demo support](https://github.com/vcmi-mods/mac-demo-support)|||||||||||||||||
+|[ai testing maps](https://github.com/vcmi-mods/ai-testing-maps)|||||||||||||||||
 |[campaign-heroes](https://github.com/vcmi-mods/campaign-heroes)||x|||x||||||||||||
 |[axolotl-creatures-pack](https://github.com/vcmi-mods/axolotl-creatures-pack)||x|||x||||||||||||
 |[tarnum](https://github.com/vcmi-mods/tarnum)||x|||x||||||||||||
