@@ -26,7 +26,7 @@ def load_vcmi_json(string):
     try:
         obj = json5.loads(string)
     except:
-        tmp = remove_comments(string)
+        tmp = remove_comments(string.decode())
         obj = json_repair.loads(tmp)
 
     return obj
