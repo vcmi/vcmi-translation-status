@@ -1,10 +1,35 @@
 import urllib.request
 import re
+import json_repair
 import os
 import json5
 import xml.etree.ElementTree as ET
 from mdutils.mdutils import MdUtils
 import pandas as pd
+
+# https://stackoverflow.com/a/18381470 (Onur Yıldırım, CC BY-SA 4.0)
+def remove_comments(string):
+    pattern = r"(\".*?\"|\'.*?\')|(/\*.*?\*/|//[^\r\n]*$)"
+    # first group captures quoted strings (double or single)
+    # second group captures comments (//single-line or /* multi-line */)
+    regex = re.compile(pattern, re.MULTILINE|re.DOTALL)
+    def _replacer(match):
+        # if the 2nd group (capturing comments) is not None,
+        # it means we have captured a non-quoted (real) comment string.
+        if match.group(2) is not None:
+            return "" # so we will return empty to remove the comment
+        else: # otherwise, we will return the 1st group
+            return match.group(1) # captured quoted-string
+    return regex.sub(_replacer, string)
+
+def load_vcmi_json(string):
+    try:
+        obj = json5.loads(string)
+    except:
+        tmp = remove_comments(string)
+        obj = json_repair.loads(tmp)
+
+    return obj
 
 def get_languages():
     with urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/lib/Languages.h') as f:
@@ -13,7 +38,7 @@ def get_languages():
     return languages
 
 def get_base_mod():
-    return json5.loads(urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/Mods/vcmi/mod.json').read())
+    return load_vcmi_json(urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/Mods/vcmi/mod.json').read())
 
 def base_mod_existing(languages):
     vcmi_base_mod = get_base_mod()
@@ -21,12 +46,12 @@ def base_mod_existing(languages):
 
 def base_mod_ratio(languages):
     base_mod = get_base_mod()
-    translation_english = json5.loads(urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/Mods/vcmi/' + base_mod["translations"][0]).read())
+    translation_english = load_vcmi_json(urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/Mods/vcmi/' + base_mod["translations"][0]).read())
 
     data = {}
 
     for language in [key for key, value in base_mod_existing(languages).items() if value == True]:
-        translation = json5.loads(urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/Mods/vcmi/' + next(value for key, value in base_mod.items() if key == language)["translations"][0]).read())
+        translation = load_vcmi_json(urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/Mods/vcmi/' + next(value for key, value in base_mod.items() if key == language)["translations"][0]).read())
         count_equal = 0
         count_difference = 0
         count_only_english = 0
@@ -43,9 +68,9 @@ def base_mod_ratio(languages):
     return data
 
 def get_mod_repo():
-    settings_schema = json5.loads(urllib.request.urlopen("https://raw.githubusercontent.com/vcmi/vcmi/develop/config/schemas/settings.json").read())
+    settings_schema = load_vcmi_json(urllib.request.urlopen("https://raw.githubusercontent.com/vcmi/vcmi/develop/config/schemas/settings.json").read())
     vcmi_mod_url = settings_schema["properties"]["launcher"]["properties"]["defaultRepositoryURL"]["default"]
-    vcmi_mods = json5.loads(urllib.request.urlopen(vcmi_mod_url).read())
+    vcmi_mods = load_vcmi_json(urllib.request.urlopen(vcmi_mod_url).read())
     return vcmi_mods
 
 def get_translation_mods():
@@ -55,7 +80,7 @@ def get_translation_mods():
 
     for key, value in vcmi_mods.items():
         url = value["mod"].replace(" ", "%20")
-        mod = json5.loads(urllib.request.urlopen(url).read())
+        mod = load_vcmi_json(urllib.request.urlopen(url).read())
         if "language" in mod:
             vcmi_translation_mods[mod["language"]] = (url, mod)
 
@@ -72,7 +97,7 @@ def get_translation_mods_translation():
                 tmp_str = urllib.request.urlopen(base_url + item).read()
             except:
                 tmp_str = urllib.request.urlopen((base_url + item).replace("content", "Content").replace("config", "Config")).read()
-            tmp |= json5.loads(tmp_str)
+            tmp |= load_vcmi_json(tmp_str)
         data[key] = tmp
     return data
 
@@ -129,7 +154,7 @@ def get_mod_translations(languages):
     data = {}
     for key, value in vcmi_mods.items():
         url = value["mod"].replace(" ", "%20")
-        mod = json5.loads(urllib.request.urlopen(url).read())
+        mod = load_vcmi_json(urllib.request.urlopen(url).read())
         if "language" not in mod:
             found_languages = []
             for language in languages:
