@@ -202,7 +202,7 @@ def create_md():
             return "$\\color{green}{\\textsf{" + str(round(percent * 100, 1)) + " \\%" + "}}$"
 
     md.new_header(level=1, title="VCMI translations")
-    md.new_line("This tables shows the current translation progress of VCMI. Contains only the state of the translation strings, not for the assets. See [here](https://github.com/vcmi/vcmi/blob/develop/docs/modders/Translations.md) how to translate VCMI.")
+    md.new_line("This tables shows the current translation progress of VCMI. See [here](https://github.com/vcmi/vcmi/blob/develop/docs/modders/Translations.md) how to translate VCMI. See assets for translation [here](files_to_translated.json) (not every language need each asset).")
 
     md.new_header(level=2, title="Main translation")
     tmp = base_mod_ratio(languages_translate)
