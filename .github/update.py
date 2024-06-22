@@ -101,6 +101,30 @@ def get_translation_mods_translation():
         data[key] = tmp
     return data
 
+def get_translation_mods_translation_assets():
+    translation_mods = get_translation_mods()
+    data = {}
+    for key, value in translation_mods.items():
+        repo = re.search(r"vcmi-mods\/(.*?)\/", value[0]).group(1)
+        branch = re.search(repo + r"\/([^\/]*?)\/", value[0]).group(1)
+        files_api = "https://api.github.com/repos/vcmi-mods/" + repo + "/git/trees/" + branch + "?recursive=1"
+        files = [x["path"].lower() for x in json5.loads(urllib.request.urlopen(files_api).read())["tree"]]
+        files_filtered = [x for x in files if "mods/" not in x]
+
+        files_to_translate = json5.load(open("files_to_translated.json", "r"))
+        files_ct = {}
+        files_found = {}
+        for file in files_to_translate:
+            type = re.search(r"content\/(.*?)\/", file).group(1)
+            if type not in files_ct: files_ct[type] = 0
+            if type not in files_found: files_found[type] = 0
+            files_ct[type] += 1
+            files_found[type] += 1 if any([file in x for x in files_filtered]) else 0
+        files_ratio = {k: files_found[k]/v for k, v in files_ct.items()}
+
+        data[key] = files_ratio
+    return data
+
 def translation_mod_ratio(translation_mods_translation):
     translation_english = translation_mods_translation["english"]
 
@@ -185,7 +209,10 @@ def create_md():
     df = pd.DataFrame({"Area": "[Main-Repo](https://github.com/vcmi/vcmi)"} | {x:([format_value(tmp[x]["ratio"])] if x in tmp else [format_value(0)]) for x in languages_translate})
     tmp = translation_mod_ratio(get_translation_mods_translation())
     for area in list(tmp.values())[0].keys():
-        df = pd.concat([df, pd.DataFrame({"Area": "[Mod-Repo](https://github.com/vcmi-mods)" + (' main' if area == None else ' ' + area)} | {x:([format_value(tmp[x][area]["ratio"])] if x in tmp else [format_value(0)]) for x in languages_translate})], ignore_index=True)
+        df = pd.concat([df, pd.DataFrame({"Area": "[Mod-Repo](https://github.com/vcmi-mods)" + (' game' if area == None else ' ' + area)} | {x:([format_value(tmp[x][area]["ratio"])] if x in tmp else [format_value(0)]) for x in languages_translate})], ignore_index=True)
+    tmp = get_translation_mods_translation_assets()
+    for area in list(tmp.values())[0].keys():
+        df = pd.concat([df, pd.DataFrame({"Area": "[Mod-Repo](https://github.com/vcmi-mods)" + (' Assets: ' + area)} | {x:([format_value(tmp[x][area])] if x in tmp else [format_value(0)]) for x in languages_translate})], ignore_index=True)
     df = df.T.reset_index().T
     md.new_table(columns=df.shape[1], rows=df.shape[0], text=df.to_numpy().flatten(), text_align='center')
 
