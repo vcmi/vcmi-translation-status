@@ -153,14 +153,14 @@ def create_md():
             return "$\\color{green}{\\textsf{" + str(round(percent * 100, 1)) + " \\%" + "}}$"
 
     md.new_header(level=1, title="VCMI translations")
-    md.new_line("This tables shows the current translation progress of VCMI. Contains only the state of the translation strings, not for the assets.")
+    md.new_line("This tables shows the current translation progress of VCMI. Contains only the state of the translation strings, not for the assets. See [here](https://github.com/vcmi/vcmi/blob/develop/docs/modders/Translations.md) how to translate VCMI.")
 
     md.new_header(level=2, title="Main translation")
     tmp = base_mod_ratio(languages_translate)
-    df = pd.DataFrame({"Area": "Main-Repo"} | {x:([format_value(tmp[x]["ratio"])] if x in tmp else [format_value(0)]) for x in languages_translate})
+    df = pd.DataFrame({"Area": "[Main-Repo](https://github.com/vcmi/vcmi)"} | {x:([format_value(tmp[x]["ratio"])] if x in tmp else [format_value(0)]) for x in languages_translate})
     tmp = translation_mod_ratio(get_translation_mods_translation())
     for area in list(tmp.values())[0].keys():
-        df = pd.concat([df, pd.DataFrame({"Area": "Mod-Repo" + (' main' if area == None else ' ' + area)} | {x:([format_value(tmp[x][area]["ratio"])] if x in tmp else [format_value(0)]) for x in languages_translate})], ignore_index=True)
+        df = pd.concat([df, pd.DataFrame({"Area": "[Mod-Repo](https://github.com/vcmi-mods)" + (' main' if area == None else ' ' + area)} | {x:([format_value(tmp[x][area]["ratio"])] if x in tmp else [format_value(0)]) for x in languages_translate})], ignore_index=True)
     df = df.T.reset_index().T
     md.new_table(columns=df.shape[1], rows=df.shape[0], text=df.to_numpy().flatten(), text_align='center')
 
@@ -168,7 +168,7 @@ def create_md():
     tmp = get_qt_translations(languages_translate)
     df = pd.DataFrame(columns=["Tool"] + languages_translate)
     for tool in list(tmp.values())[0].keys():
-        df = pd.concat([df, pd.DataFrame({"Tool": tool} | {x:[format_value(tmp[x][tool]["ratio"])] if x in tmp else [format_value(0)] for x in languages_translate})], ignore_index=True)
+        df = pd.concat([df, pd.DataFrame({"Tool": "[" + tool + "](https://github.com/vcmi/vcmi/tree/develop/" + tool + "/translation)"} | {x:[format_value(tmp[x][tool]["ratio"])] if x in tmp else [format_value(0)] for x in languages_translate})], ignore_index=True)
     df = df.T.reset_index().T
     md.new_table(columns=df.shape[1], rows=df.shape[0], text=df.to_numpy().flatten(), text_align='center')
 
@@ -176,7 +176,7 @@ def create_md():
     tmp = get_mod_translations(languages_translate)
     df = pd.DataFrame(columns=["Mod"] + languages_translate)
     for mod in tmp:
-        df = pd.concat([df, pd.DataFrame({"Mod": mod} | {x:["x" if x in tmp[mod] else ""] for x in languages_translate})], ignore_index=True)
+        df = pd.concat([df, pd.DataFrame({"Mod": "[" + mod + "](https://github.com/vcmi-mods/" + mod + ")"} | {x:["x" if x in tmp[mod] else ""] for x in languages_translate})], ignore_index=True)
     df = df.T.reset_index().T
     md.new_table(columns=df.shape[1], rows=df.shape[0], text=df.to_numpy().flatten(), text_align='center')
 
