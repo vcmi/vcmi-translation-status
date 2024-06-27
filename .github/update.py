@@ -3,9 +3,9 @@ import re
 import json_repair
 import os
 import json5
-import xml.etree.ElementTree as ET
 from mdutils.mdutils import MdUtils
 import pandas as pd
+import defusedxml.ElementTree as ET
 
 # https://stackoverflow.com/a/18381470 (Onur Yıldırım, CC BY-SA 4.0)
 def remove_comments(string):
