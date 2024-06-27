@@ -4,7 +4,7 @@ import os
 import json5
 from mdutils.mdutils import MdUtils
 import pandas as pd
-import defusedxml.ElementTree
+import defusedxml.ElementTree as ET
 
 def get_languages():
     with urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/lib/Languages.h') as f:
@@ -112,7 +112,7 @@ def get_qt_translations(languages):
             count_translated = 0
             count_untranslated = 0
             tmp_str = urllib.request.urlopen("https://raw.githubusercontent.com/vcmi/vcmi/develop/" + type + "/translation/" + language + ".ts").read()
-            root = defusedxml.ElementTree.fromstring(tmp_str)
+            root = ET.fromstring(tmp_str)
             for item_context in root.iter('context'):
                 for item_message in item_context.iter('message'):
                     if list(item_message.iter('translation'))[0].get("type") == None:
