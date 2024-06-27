@@ -119,4 +119,4 @@ This tables shows the current translation progress of VCMI. See [here](https://g
 |[object-pack](https://github.com/vcmi-mods/object-pack)||x|||||||||||||||
 |[tavern-invite](https://github.com/vcmi-mods/tavern-invite)|||||x||||||||||||
 |[ultimate-balance](https://github.com/vcmi-mods/ultimate-balance)|||||||||||||||||
-|[pvp-balance](https://github.com/vcmi-mods/pvp-balance)|||||||||||||||||
+|[pvp-balance](https://github.com/vcmi-mods/pvp-balance)|||||||||x||||||||
