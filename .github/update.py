@@ -1,10 +1,35 @@
 import urllib.request
 import re
+import json_repair
 import os
 import json5
 from mdutils.mdutils import MdUtils
 import pandas as pd
 import defusedxml.ElementTree as ET
+
+# https://stackoverflow.com/a/18381470 (Onur Yıldırım, CC BY-SA 4.0)
+def remove_comments(string):
+    pattern = r"(\".*?\"|\'.*?\')|(/\*.*?\*/|//[^\r\n]*$)"
+    # first group captures quoted strings (double or single)
+    # second group captures comments (//single-line or /* multi-line */)
+    regex = re.compile(pattern, re.MULTILINE|re.DOTALL)
+    def _replacer(match):
+        # if the 2nd group (capturing comments) is not None,
+        # it means we have captured a non-quoted (real) comment string.
+        if match.group(2) is not None:
+            return "" # so we will return empty to remove the comment
+        else: # otherwise, we will return the 1st group
+            return match.group(1) # captured quoted-string
+    return regex.sub(_replacer, string)
+
+def load_vcmi_json(string):
+    try:
+        obj = json5.loads(string)
+    except:
+        tmp = remove_comments(string.decode())
+        obj = json_repair.loads(tmp)
+
+    return obj
 
 def get_languages():
     with urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/lib/Languages.h') as f:
@@ -13,7 +38,7 @@ def get_languages():
     return languages
 
 def get_base_mod():
-    return json5.loads(urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/Mods/vcmi/mod.json').read())
+    return load_vcmi_json(urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/Mods/vcmi/mod.json').read())
 
 def base_mod_existing(languages):
     vcmi_base_mod = get_base_mod()
@@ -21,12 +46,12 @@ def base_mod_existing(languages):
 
 def base_mod_ratio(languages):
     base_mod = get_base_mod()
-    translation_english = json5.loads(urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/Mods/vcmi/' + base_mod["translations"][0]).read())
+    translation_english = load_vcmi_json(urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/Mods/vcmi/' + base_mod["translations"][0]).read())
 
     data = {}
 
     for language in [key for key, value in base_mod_existing(languages).items() if value == True]:
-        translation = json5.loads(urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/Mods/vcmi/' + next(value for key, value in base_mod.items() if key == language)["translations"][0]).read())
+        translation = load_vcmi_json(urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/Mods/vcmi/' + next(value for key, value in base_mod.items() if key == language)["translations"][0]).read())
         count_equal = 0
         count_difference = 0
         count_only_english = 0
@@ -43,9 +68,9 @@ def base_mod_ratio(languages):
     return data
 
 def get_mod_repo():
-    settings_schema = json5.loads(urllib.request.urlopen("https://raw.githubusercontent.com/vcmi/vcmi/develop/config/schemas/settings.json").read())
+    settings_schema = load_vcmi_json(urllib.request.urlopen("https://raw.githubusercontent.com/vcmi/vcmi/develop/config/schemas/settings.json").read())
     vcmi_mod_url = settings_schema["properties"]["launcher"]["properties"]["defaultRepositoryURL"]["default"]
-    vcmi_mods = json5.loads(urllib.request.urlopen(vcmi_mod_url).read())
+    vcmi_mods = load_vcmi_json(urllib.request.urlopen(vcmi_mod_url).read())
     return vcmi_mods
 
 def get_translation_mods():
@@ -55,7 +80,7 @@ def get_translation_mods():
 
     for key, value in vcmi_mods.items():
         url = value["mod"].replace(" ", "%20")
-        mod = json5.loads(urllib.request.urlopen(url).read())
+        mod = load_vcmi_json(urllib.request.urlopen(url).read())
         if "language" in mod:
             vcmi_translation_mods[mod["language"]] = (url, mod)
 
@@ -72,8 +97,32 @@ def get_translation_mods_translation():
                 tmp_str = urllib.request.urlopen(base_url + item).read()
             except:
                 tmp_str = urllib.request.urlopen((base_url + item).replace("content", "Content").replace("config", "Config")).read()
-            tmp |= json5.loads(tmp_str)
+            tmp |= load_vcmi_json(tmp_str)
         data[key] = tmp
+    return data
+
+def get_translation_mods_translation_assets():
+    translation_mods = get_translation_mods()
+    data = {}
+    for key, value in translation_mods.items():
+        repo = re.search(r"vcmi-mods\/(.*?)\/", value[0]).group(1)
+        branch = re.search(repo + r"\/([^\/]*?)\/", value[0]).group(1)
+        files_api = "https://api.github.com/repos/vcmi-mods/" + repo + "/git/trees/" + branch + "?recursive=1"
+        files = [x["path"].lower() for x in json5.loads(urllib.request.urlopen(files_api).read())["tree"]]
+        files_filtered = [x for x in files if "mods/" not in x]
+
+        files_to_translate = json5.load(open("files_to_translated.json", "r"))
+        files_ct = {}
+        files_found = {}
+        for file in files_to_translate:
+            type = re.search(r"content\/(.*?)\/", file).group(1)
+            if type not in files_ct: files_ct[type] = 0
+            if type not in files_found: files_found[type] = 0
+            files_ct[type] += 1
+            files_found[type] += 1 if any([file in x for x in files_filtered]) else 0
+        files_ratio = {k: files_found[k]/v for k, v in files_ct.items()}
+
+        data[key] = files_ratio
     return data
 
 def translation_mod_ratio(translation_mods_translation):
@@ -129,7 +178,7 @@ def get_mod_translations(languages):
     data = {}
     for key, value in vcmi_mods.items():
         url = value["mod"].replace(" ", "%20")
-        mod = json5.loads(urllib.request.urlopen(url).read())
+        mod = load_vcmi_json(urllib.request.urlopen(url).read())
         if "language" not in mod:
             found_languages = []
             for language in languages:
@@ -148,19 +197,22 @@ def create_md():
         if percent < 0.7:
             return "$\\color{red}{\\textsf{" + str(round(percent * 100, 1)) + " \\%" + "}}$"
         elif percent < 0.9:
-            return "$\\color{yellow}{\\textsf{" + str(round(percent * 100, 1)) + " \\%" + "}}$"
+            return "$\\color{orange}{\\textsf{" + str(round(percent * 100, 1)) + " \\%" + "}}$"
         else:
             return "$\\color{green}{\\textsf{" + str(round(percent * 100, 1)) + " \\%" + "}}$"
 
     md.new_header(level=1, title="VCMI translations")
-    md.new_line("This tables shows the current translation progress of VCMI. Contains only the state of the translation strings, not for the assets.")
+    md.new_line("This tables shows the current translation progress of VCMI. See [here](https://github.com/vcmi/vcmi/blob/develop/docs/modders/Translations.md) how to translate VCMI. See assets for translation [here](files_to_translated.json) (not every language need each asset).")
 
     md.new_header(level=2, title="Main translation")
     tmp = base_mod_ratio(languages_translate)
-    df = pd.DataFrame({"Area": "Main-Repo"} | {x:([format_value(tmp[x]["ratio"])] if x in tmp else [format_value(0)]) for x in languages_translate})
+    df = pd.DataFrame({"Area": "[Main-Repo](https://github.com/vcmi/vcmi)"} | {x:([format_value(tmp[x]["ratio"])] if x in tmp else [format_value(0)]) for x in languages_translate})
     tmp = translation_mod_ratio(get_translation_mods_translation())
     for area in list(tmp.values())[0].keys():
-        df = pd.concat([df, pd.DataFrame({"Area": "Mod-Repo" + (' main' if area == None else ' ' + area)} | {x:([format_value(tmp[x][area]["ratio"])] if x in tmp else [format_value(0)]) for x in languages_translate})], ignore_index=True)
+        df = pd.concat([df, pd.DataFrame({"Area": "[Mod-Repo](https://github.com/vcmi-mods)" + (' game' if area == None else ' ' + area)} | {x:([format_value(tmp[x][area]["ratio"])] if x in tmp else [format_value(0)]) for x in languages_translate})], ignore_index=True)
+    tmp = get_translation_mods_translation_assets()
+    for area in list(tmp.values())[0].keys():
+        df = pd.concat([df, pd.DataFrame({"Area": "[Mod-Repo](https://github.com/vcmi-mods)" + (' Assets: ' + area)} | {x:([format_value(tmp[x][area])] if x in tmp else [format_value(0)]) for x in languages_translate})], ignore_index=True)
     df = df.T.reset_index().T
     md.new_table(columns=df.shape[1], rows=df.shape[0], text=df.to_numpy().flatten(), text_align='center')
 
@@ -168,7 +220,7 @@ def create_md():
     tmp = get_qt_translations(languages_translate)
     df = pd.DataFrame(columns=["Tool"] + languages_translate)
     for tool in list(tmp.values())[0].keys():
-        df = pd.concat([df, pd.DataFrame({"Tool": tool} | {x:[format_value(tmp[x][tool]["ratio"])] if x in tmp else [format_value(0)] for x in languages_translate})], ignore_index=True)
+        df = pd.concat([df, pd.DataFrame({"Tool": "[" + tool + "](https://github.com/vcmi/vcmi/tree/develop/" + tool + "/translation)"} | {x:[format_value(tmp[x][tool]["ratio"])] if x in tmp else [format_value(0)] for x in languages_translate})], ignore_index=True)
     df = df.T.reset_index().T
     md.new_table(columns=df.shape[1], rows=df.shape[0], text=df.to_numpy().flatten(), text_align='center')
 
@@ -176,7 +228,7 @@ def create_md():
     tmp = get_mod_translations(languages_translate)
     df = pd.DataFrame(columns=["Mod"] + languages_translate)
     for mod in tmp:
-        df = pd.concat([df, pd.DataFrame({"Mod": mod} | {x:["x" if x in tmp[mod] else ""] for x in languages_translate})], ignore_index=True)
+        df = pd.concat([df, pd.DataFrame({"Mod": "[" + mod + "](https://github.com/vcmi-mods/" + mod.replace(" ", "-") + ")"} | {x:["x" if x in tmp[mod] else ""] for x in languages_translate})], ignore_index=True)
     df = df.T.reset_index().T
     md.new_table(columns=df.shape[1], rows=df.shape[0], text=df.to_numpy().flatten(), text_align='center')
 

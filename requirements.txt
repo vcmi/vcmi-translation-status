@@ -1,4 +1,6 @@
-json5==0.9.11
-pandas==1.5.3
-mdutils==1.6.0
 defusedxml==0.7.1
+json5==0.9.11
+json_repair==0.20.1
+mdutils==1.6.0
+numpy==1.26.4
+pandas==1.5.3
