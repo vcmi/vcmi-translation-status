@@ -119,7 +119,7 @@ def get_translation_mods_translation_assets():
             if type not in files_ct: files_ct[type] = 0
             if type not in files_found: files_found[type] = 0
             files_ct[type] += 1
-            files_found[type] += 1 if any([file in x for x in files_filtered]) else 0
+            files_found[type] += 1 if any(file in x for x in files_filtered) else 0
         files_ratio = {k: files_found[k]/v for k, v in files_ct.items()}
 
         data[key] = files_ratio
