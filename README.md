@@ -35,6 +35,7 @@ This tables shows the current translation progress of VCMI. See [here](https://g
 |[tides-of-war](https://github.com/vcmi-mods/tides-of-war)||x|||x||||x|||x|||||
 |[courtyard](https://github.com/vcmi-mods/courtyard)||x|||x||||x||||||||
 |[neutral-heroes](https://github.com/vcmi-mods/neutral-heroes)||x|||x||||||||||||
+|[new-old-heroes](https://github.com/vcmi-mods/new-old-heroes)|||||||||||||||||
 |[asylum-town](https://github.com/vcmi-mods/asylum-town)||x|||x||||x||||||||
 |[highlands-town](https://github.com/vcmi-mods/highlands-town)||x|||x||||||||||||
 |[new-pavilion](https://github.com/vcmi-mods/new-pavilion)||x||x|x||||x||||||||
@@ -115,8 +116,4 @@ This tables shows the current translation progress of VCMI. See [here](https://g
 |[h3Evo](https://github.com/vcmi-mods/h3Evo)|||||||||||||||||
 |[small-era-mods](https://github.com/vcmi-mods/small-era-mods)|||||||||||||||||
 |[flugel-creature](https://github.com/vcmi-mods/flugel-creature)||x|||||||||||||||
-|[extreme-ai](https://github.com/vcmi-mods/extreme-ai)|||||||||||||||||
-|[object-pack](https://github.com/vcmi-mods/object-pack)||x|||||||||||||||
-|[tavern-invite](https://github.com/vcmi-mods/tavern-invite)|||||x||||||||||||
-|[ultimate-balance](https://github.com/vcmi-mods/ultimate-balance)|||||||||||||||||
-|[pvp-balance](https://github.com/vcmi-mods/pvp-balance)|||||||||x||||||||
+|[phoenix-as-a-dream](https://github.com/vcmi-mods/phoenix-as-a-dream)||x|||||||||||||||
