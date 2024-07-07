@@ -117,3 +117,8 @@ This tables shows the current translation progress of VCMI. See [here](https://g
 |[small-era-mods](https://github.com/vcmi-mods/small-era-mods)|||||||||||||||||
 |[flugel-creature](https://github.com/vcmi-mods/flugel-creature)||x|||||||||||||||
 |[phoenix-as-a-dream](https://github.com/vcmi-mods/phoenix-as-a-dream)||x|||||||||||||||
+|[extreme-ai](https://github.com/vcmi-mods/extreme-ai)|||||||||||||||||
+|[object-pack](https://github.com/vcmi-mods/object-pack)||x|||||||||||||||
+|[tavern-invite](https://github.com/vcmi-mods/tavern-invite)|||||x||||||||||||
+|[ultimate-balance](https://github.com/vcmi-mods/ultimate-balance)|||||||||||||||||
+|[pvp-balance](https://github.com/vcmi-mods/pvp-balance)|||||||||x||||||||
