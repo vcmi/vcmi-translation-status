@@ -32,7 +32,7 @@ def load_vcmi_json(string):
     return obj
 
 def get_languages():
-    with urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/lib/Languages.h') as f:
+    with urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/lib/texts/Languages.h') as f:
         src = f.read().decode('utf-8')
     languages = [x for x in re.findall(r"{ ?\"([\w]*)?\" ?,", src, re.IGNORECASE) if "other" not in x]
     return languages
