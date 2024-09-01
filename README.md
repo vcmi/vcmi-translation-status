@@ -9,7 +9,7 @@ This tables shows the current translation progress of VCMI. See [here](https://g
 
 |Area|czech|chinese|finnish|french|german|hungarian|italian|korean|polish|portuguese|russian|spanish|swedish|turkish|ukrainian|vietnamese|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|[Main-Repo](https://github.com/vcmi/vcmi)|$\color{orange}{\textsf{81.9 \%}}$|$\color{green}{\textsf{94.9 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{49.3 \%}}$|$\color{green}{\textsf{99.7 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{94.7 \%}}$|$\color{green}{\textsf{94.6 \%}}$|$\color{red}{\textsf{54.5 \%}}$|$\color{orange}{\textsf{73.1 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{92.3 \%}}$|$\color{red}{\textsf{53.7 \%}}$|
+|[Main-Repo](https://github.com/vcmi/vcmi)|$\color{orange}{\textsf{81.7 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{49.1 \%}}$|$\color{green}{\textsf{99.3 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{94.4 \%}}$|$\color{green}{\textsf{94.3 \%}}$|$\color{red}{\textsf{54.3 \%}}$|$\color{orange}{\textsf{72.8 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{92.0 \%}}$|$\color{red}{\textsf{53.5 \%}}$|
 |[Mod-Repo](https://github.com/vcmi-mods) game|$\color{green}{\textsf{99.5 \%}}$|$\color{green}{\textsf{99.8 \%}}$|$\color{red}{\textsf{53.0 \%}}$|$\color{green}{\textsf{99.5 \%}}$|$\color{green}{\textsf{99.8 \%}}$|$\color{green}{\textsf{99.1 \%}}$|$\color{green}{\textsf{96.0 \%}}$|$\color{green}{\textsf{99.5 \%}}$|$\color{green}{\textsf{99.5 \%}}$|$\color{green}{\textsf{99.7 \%}}$|$\color{green}{\textsf{99.5 \%}}$|$\color{green}{\textsf{99.5 \%}}$|$\color{green}{\textsf{99.4 \%}}$|$\color{red}{\textsf{56.3 \%}}$|$\color{green}{\textsf{99.9 \%}}$|$\color{green}{\textsf{99.5 \%}}$|
 |[Mod-Repo](https://github.com/vcmi-mods) map|$\color{green}{\textsf{99.7 \%}}$|$\color{green}{\textsf{99.9 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{99.6 \%}}$|$\color{green}{\textsf{99.9 \%}}$|$\color{red}{\textsf{48.6 \%}}$|$\color{red}{\textsf{23.8 \%}}$|$\color{green}{\textsf{98.3 \%}}$|$\color{orange}{\textsf{73.1 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{92.5 \%}}$|$\color{red}{\textsf{57.6 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{91.8 \%}}$|$\color{red}{\textsf{0.0 \%}}$|
 |[Mod-Repo](https://github.com/vcmi-mods) campaign|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{54.7 \%}}$|$\color{red}{\textsf{25.8 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{66.1 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{96.6 \%}}$|$\color{red}{\textsf{0.0 \%}}$|
@@ -22,8 +22,8 @@ This tables shows the current translation progress of VCMI. See [here](https://g
 
 |Tool|czech|chinese|finnish|french|german|hungarian|italian|korean|polish|portuguese|russian|spanish|swedish|turkish|ukrainian|vietnamese|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|[mapeditor](https://github.com/vcmi/vcmi/tree/develop/mapeditor/translation)|$\color{orange}{\textsf{87.7 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{orange}{\textsf{86.9 \%}}$|$\color{green}{\textsf{90.5 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{90.5 \%}}$|$\color{red}{\textsf{29.3 \%}}$|$\color{red}{\textsf{35.0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{29.6 \%}}$|$\color{red}{\textsf{38.6 \%}}$|
-|[launcher](https://github.com/vcmi/vcmi/tree/develop/launcher/translation)|$\color{orange}{\textsf{89.7 \%}}$|$\color{green}{\textsf{94.5 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{orange}{\textsf{78.2 \%}}$|$\color{green}{\textsf{93.5 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{93.5 \%}}$|$\color{green}{\textsf{93.5 \%}}$|$\color{red}{\textsf{40.5 \%}}$|$\color{red}{\textsf{60.1 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{93.5 \%}}$|$\color{red}{\textsf{54.8 \%}}$|
+|[mapeditor](https://github.com/vcmi/vcmi/tree/develop/mapeditor/translation)|$\color{orange}{\textsf{85.6 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{orange}{\textsf{84.6 \%}}$|$\color{orange}{\textsf{88.1 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{97.5 \%}}$|$\color{orange}{\textsf{88.1 \%}}$|$\color{red}{\textsf{28.5 \%}}$|$\color{red}{\textsf{33.6 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{28.8 \%}}$|$\color{red}{\textsf{37.1 \%}}$|
+|[launcher](https://github.com/vcmi/vcmi/tree/develop/launcher/translation)|$\color{green}{\textsf{92.9 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{orange}{\textsf{81.8 \%}}$|$\color{green}{\textsf{97.5 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{97.5 \%}}$|$\color{green}{\textsf{97.5 \%}}$|$\color{red}{\textsf{41.8 \%}}$|$\color{red}{\textsf{62.5 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{97.5 \%}}$|$\color{red}{\textsf{56.8 \%}}$|
 
 ## Mod translations
 
@@ -31,8 +31,8 @@ This tables shows the current translation progress of VCMI. See [here](https://g
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |[vcmi-extras](https://github.com/vcmi-mods/vcmi-extras)|||||||||||||||||
 |[hota](https://github.com/vcmi-mods/hota)|x|x|||x||||x||x|x|||x||
-|[wake-of-gods](https://github.com/vcmi-mods/wake-of-gods)||x|||x||||x|||x|||||
-|[tides-of-war](https://github.com/vcmi-mods/tides-of-war)||x|||x||||x|||x|||||
+|[wake-of-gods](https://github.com/vcmi-mods/wake-of-gods)||x|||x||||x||x|x|||||
+|[tides-of-war](https://github.com/vcmi-mods/tides-of-war)||x|||x||||x||x|x|||||
 |[courtyard](https://github.com/vcmi-mods/courtyard)||x|||x||||x||x||||||
 |[neutral-heroes](https://github.com/vcmi-mods/neutral-heroes)||x|||x||||||||||||
 |[new-old-heroes](https://github.com/vcmi-mods/new-old-heroes)|||||||||||||||||
@@ -49,18 +49,18 @@ This tables shows the current translation progress of VCMI. See [here](https://g
 |[ai trace](https://github.com/vcmi-mods/ai-trace)|||||||||||||||||
 |[mac demo support](https://github.com/vcmi-mods/mac-demo-support)|||||||||||||||||
 |[ai testing maps](https://github.com/vcmi-mods/ai-testing-maps)|||||||||||||||||
-|[campaign-heroes](https://github.com/vcmi-mods/campaign-heroes)||x|||x||||||||||||
+|[campaign-heroes](https://github.com/vcmi-mods/campaign-heroes)||x|||x||||||x||||||
 |[axolotl-creatures-pack](https://github.com/vcmi-mods/axolotl-creatures-pack)||x|||x||||||x||||||
 |[tarnum](https://github.com/vcmi-mods/tarnum)||x|||x||||||||||||
 |[magic-fader](https://github.com/vcmi-mods/magic-fader)||x|||||||||||||||
 |[grove](https://github.com/vcmi-mods/grove)||x|||x||||x||x||||||
 |[combine-grail](https://github.com/vcmi-mods/combine-grail)||x|||||||||||||||
-|[fairy-town](https://github.com/vcmi-mods/fairy-town)||x|||x||||||x||||||
+|[fairy-town](https://github.com/vcmi-mods/fairy-town)||x|||x||||||x||||x||
 |[haven-town](https://github.com/vcmi-mods/haven-town)||x|||x||||x||||||||
-|[ruins-town](https://github.com/vcmi-mods/ruins-town)||x|||x||||x||||||||
+|[ruins-town](https://github.com/vcmi-mods/ruins-town)||x|||x||||x||x||||||
 |[h3-themes](https://github.com/vcmi-mods/h3-themes)|||||||||||||||||
 |[creatures-hidden-potential](https://github.com/vcmi-mods/creatures-hidden-potential)|||||||||||||||||
-|[tartarus-town](https://github.com/vcmi-mods/tartarus-town)||x|||x||||x||||||||
+|[tartarus-town](https://github.com/vcmi-mods/tartarus-town)||x|||x||||x||x||||||
 |[preserve-town](https://github.com/vcmi-mods/preserve-town)||x|||x||||||||||||
 |[abyss-town](https://github.com/vcmi-mods/abyss-town)||x||x|x||||||x||||||
 |[retreat-town](https://github.com/vcmi-mods/retreat-town)||x||x|x||||||x||||||
@@ -68,7 +68,7 @@ This tables shows the current translation progress of VCMI. See [here](https://g
 |[lost-souls](https://github.com/vcmi-mods/lost-souls)||x|||||||||||||||
 |[carpet-whisperers](https://github.com/vcmi-mods/carpet-whisperers)||x|||||||||||||||
 |[kurek-creatures](https://github.com/vcmi-mods/kurek-creatures)||x|||||||||||||||
-|[undead-sphinxes](https://github.com/vcmi-mods/undead-sphinxes)||x|||||||||||||||
+|[undead-sphinxes](https://github.com/vcmi-mods/undead-sphinxes)||x|||||||||x||||||
 |[andruids-spell-balance](https://github.com/vcmi-mods/andruids-spell-balance)|||||||||||||||||
 |[new-old-spells-plus](https://github.com/vcmi-mods/new-old-spells-plus)||x|||x||||x||||||||
 |[portraits-packs](https://github.com/vcmi-mods/portraits-packs)|||||||||||||||||
@@ -90,11 +90,11 @@ This tables shows the current translation progress of VCMI. See [here](https://g
 |[refugee-town](https://github.com/vcmi-mods/refugee-town)||x||x|x||||||x||||||
 |[asphalt-terrain](https://github.com/vcmi-mods/asphalt-terrain)||x|||||||||x||||||
 |[newtown-terrains](https://github.com/vcmi-mods/newtown-terrains)||x|||||||||x||||||
-|[forge2k](https://github.com/vcmi-mods/forge2k)||x|||x||||||x||||||
+|[forge2k](https://github.com/vcmi-mods/forge2k)||x|||x||||x||x||||||
 |[ab-bad-ending-assets](https://github.com/vcmi-mods/ab-bad-ending-assets)||x|||||||||||||||
 |[ab-bad-ending-maps](https://github.com/vcmi-mods/ab-bad-ending-maps)|||||||||||||||||
 |[warzyw-templates](https://github.com/vcmi-mods/warzyw-templates)|||||||||||||||||
-|[wyrmsun-boats](https://github.com/vcmi-mods/wyrmsun-boats)||x|||||||||||||||
+|[wyrmsun-boats](https://github.com/vcmi-mods/wyrmsun-boats)||x|||||||||x||||||
 |[ensrick-portraits](https://github.com/vcmi-mods/ensrick-portraits)|||||||||||||||||
 |[morns-battlefields](https://github.com/vcmi-mods/morns-battlefields)|||||||||||||||||
 |[towns-new-views](https://github.com/vcmi-mods/towns-new-views)|||||||||||||||||
@@ -121,4 +121,4 @@ This tables shows the current translation progress of VCMI. See [here](https://g
 |[object-pack](https://github.com/vcmi-mods/object-pack)||x|||||||||x||||||
 |[tavern-invite](https://github.com/vcmi-mods/tavern-invite)|||||x||||||||||||
 |[ultimate-balance](https://github.com/vcmi-mods/ultimate-balance)|||||||||||||||||
-|[pvp-balance](https://github.com/vcmi-mods/pvp-balance)|||||||||x||||||||
+|[pvp-balance](https://github.com/vcmi-mods/pvp-balance)|||||||||x||x||||||
