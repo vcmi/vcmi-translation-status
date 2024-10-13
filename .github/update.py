@@ -91,15 +91,14 @@ def get_translation_mods_translation():
     data = {}
     for key, value in translation_mods.items():
         tmp = {}
-        if "translations" in value[1]:
-            for item in value[1]["translations"]:
-                base_url = value[0].rsplit('/', 1)[0] + "/content/"
-                try:
-                    tmp_str = urllib.request.urlopen(base_url + item).read()
-                except:
-                    tmp_str = urllib.request.urlopen((base_url + item).replace("content", "Content").replace("config", "Config")).read()
-                tmp |= load_vcmi_json(tmp_str)
-            data[key] = tmp
+        for item in value[1]["translations"]:
+            base_url = value[0].rsplit('/', 1)[0] + "/content/"
+            try:
+                tmp_str = urllib.request.urlopen(base_url + item).read()
+            except:
+                tmp_str = urllib.request.urlopen((base_url + item).replace("content", "Content").replace("config", "Config")).read()
+            tmp |= load_vcmi_json(tmp_str)
+        data[key] = tmp
     return data
 
 def get_translation_mods_translation_assets():
@@ -203,7 +202,7 @@ def create_md():
             return "$\\color{green}{\\textsf{" + str(round(percent * 100, 1)) + " \\%" + "}}$"
 
     md.new_header(level=1, title="VCMI translations")
-    md.new_line("This tables shows the current translation progress of VCMI. See [here](https://github.com/vcmi/vcmi/blob/develop/docs/modders/Translations.md) how to translate VCMI. See assets for translation [here](files_to_translated.json) (not every language need each asset).")
+    md.new_line("This tables shows the current translation progress of VCMI. See [here](https://vcmi.eu/translators/Translations/) how to translate VCMI. See assets for translation [here](files_to_translated.json) (not every language need each asset).")
 
     md.new_header(level=2, title="Main translation")
     tmp = base_mod_ratio(languages_translate)
