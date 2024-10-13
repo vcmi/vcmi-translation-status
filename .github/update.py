@@ -91,14 +91,15 @@ def get_translation_mods_translation():
     data = {}
     for key, value in translation_mods.items():
         tmp = {}
-        for item in value[1]["translations"]:
-            base_url = value[0].rsplit('/', 1)[0] + "/content/"
-            try:
-                tmp_str = urllib.request.urlopen(base_url + item).read()
-            except:
-                tmp_str = urllib.request.urlopen((base_url + item).replace("content", "Content").replace("config", "Config")).read()
-            tmp |= load_vcmi_json(tmp_str)
-        data[key] = tmp
+        if "translations" in value[1]:
+            for item in value[1]["translations"]:
+                base_url = value[0].rsplit('/', 1)[0] + "/content/"
+                try:
+                    tmp_str = urllib.request.urlopen(base_url + item).read()
+                except:
+                    tmp_str = urllib.request.urlopen((base_url + item).replace("content", "Content").replace("config", "Config")).read()
+                tmp |= load_vcmi_json(tmp_str)
+            data[key] = tmp
     return data
 
 def get_translation_mods_translation_assets():
