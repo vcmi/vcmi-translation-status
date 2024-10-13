@@ -160,15 +160,22 @@ def get_qt_translations(languages):
         for type in ["mapeditor", "launcher"]:
             count_translated = 0
             count_untranslated = 0
-            tmp_str = urllib.request.urlopen("https://raw.githubusercontent.com/vcmi/vcmi/develop/" + type + "/translation/" + language + ".ts").read()
-            root = ET.fromstring(tmp_str)
-            for item_context in root.iter('context'):
-                for item_message in item_context.iter('message'):
-                    if list(item_message.iter('translation'))[0].get("type") == None:
-                        count_translated += 1
-                    else:
-                        count_untranslated += 1
-            ratio = (count_translated) / (count_translated + count_untranslated)
+            try:
+                tmp_str = urllib.request.urlopen("https://raw.githubusercontent.com/vcmi/vcmi/develop/" + type + "/translation/" + language + ".ts").read()
+            except:
+                tmp_str = ""
+            if tmp_str != "":
+                root = ET.fromstring(tmp_str)
+                for item_context in root.iter('context'):
+                    for item_message in item_context.iter('message'):
+                        if list(item_message.iter('translation'))[0].get("type") == None:
+                            count_translated += 1
+                        else:
+                            count_untranslated += 1
+            if (count_translated + count_untranslated) > 0:
+                ratio = (count_translated) / (count_translated + count_untranslated)
+            else:
+                ratio = 0
             data_type[type] = {"ratio": ratio, "count_translated": count_translated, "count_untranslated": count_untranslated}
         data[language] = data_type
     return data
