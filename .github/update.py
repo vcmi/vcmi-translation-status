@@ -81,7 +81,7 @@ def get_translation_mods():
     for key, value in vcmi_mods.items():
         url = value["mod"].replace(" ", "%20")
         mod = load_vcmi_json(urllib.request.urlopen(url).read())
-        if "language" in mod:
+        if "language" in mod and "modType" in mod and mod["modType"].lower() == "translation":
             vcmi_translation_mods[mod["language"]] = (url, mod)
 
     return vcmi_translation_mods
