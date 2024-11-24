@@ -46,12 +46,12 @@ def base_mod_existing(languages):
 
 def base_mod_ratio(languages):
     base_mod = get_base_mod()
-    translation_english = load_vcmi_json(urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/Mods/vcmi/' + base_mod["translations"][0]).read())
+    translation_english = load_vcmi_json(urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/Mods/vcmi/Content/config/' + base_mod["translations"][0]).read())
 
     data = {}
 
     for language in [key for key, value in base_mod_existing(languages).items() if value == True]:
-        translation = load_vcmi_json(urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/Mods/vcmi/' + next(value for key, value in base_mod.items() if key == language)["translations"][0]).read())
+        translation = load_vcmi_json(urllib.request.urlopen('https://raw.githubusercontent.com/vcmi/vcmi/develop/Mods/vcmi/Content/config/' + next(value for key, value in base_mod.items() if key == language)["translations"][0]).read())
         count_equal = 0
         count_difference = 0
         count_only_english = 0
