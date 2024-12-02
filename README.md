@@ -29,7 +29,7 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 
 |Language|czech|chinese|finnish|french|german|hungarian|italian|korean|polish|portuguese|russian|spanish|swedish|turkish|ukrainian|vietnamese|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Translated mods|$\color{red}{\textsf{52.0 \%}}$|$\color{red}{\textsf{46.1 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{4.9 \%}}$|$\color{red}{\textsf{30.4 \%}}$|$\color{red}{\textsf{2.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{42.2 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{33.3 \%}}$|$\color{red}{\textsf{2.9 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{5.9 \%}}$|$\color{red}{\textsf{1.0 \%}}$|
+|Translated mods|$\color{red}{\textsf{52.0 \%}}$|$\color{red}{\textsf{46.1 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{4.9 \%}}$|$\color{red}{\textsf{30.4 \%}}$|$\color{red}{\textsf{2.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{42.2 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{33.3 \%}}$|$\color{red}{\textsf{2.9 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{5.9 \%}}$|$\color{red}{\textsf{1.0 \%}}$|
 
 ## Mods translation details
 
@@ -129,7 +129,7 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 |[czech-map-pack](https://github.com/vcmi-mods/czech-map-pack)|||||||||||||||||
 |[modder-tools-pack](https://github.com/vcmi-mods/modder-tools-pack)|||||||||||||||||
 |[heroes-o-pedia](https://github.com/vcmi-mods/heroes-o-pedia)|||||||||||||||||
-|[chronicles-translation](https://github.com/vcmi-mods/chronicles-translation)|x||||||||x||||||||
+|[chronicles-translation](https://github.com/vcmi-mods/chronicles-translation)|x||||||||x||||x||||
 |[chronicles-enhanced](https://github.com/vcmi-mods/chronicles-enhanced)|x||||||||x||||||||
 |[overall-ai-bonus](https://github.com/vcmi-mods/overall-ai-bonus)||x|||||||||||||||
 |[vivid-battlefields](https://github.com/vcmi-mods/vivid-battlefields)|x||||||||||||||||
