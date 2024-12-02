@@ -231,7 +231,18 @@ def create_md():
     df = df.T.reset_index().T
     md.new_table(columns=df.shape[1], rows=df.shape[0], text=df.to_numpy().flatten(), text_align='center')
 
-    md.new_header(level=2, title="Mod translations")
+    tmp = get_mod_translations(languages_translate)
+    mod_counts = {language: sum([1 for mods in tmp.values() if language in mods]) for language in languages_translate}
+    total_mods = len(tmp)
+    percentages = [mod_counts[lang] / total_mods if total_mods > 0 else 0 for lang in languages_translate]
+
+    md.new_header(level=2, title="Mods translation status")
+    header = ["Language"] + languages_translate
+    values = ["Translated mods"] + [format_value(percent) for percent in percentages]
+
+    md.new_table(columns=len(header), rows=2, text=header + values, text_align='center')
+
+    md.new_header(level=2, title="Mods translation details")
     tmp = get_mod_translations(languages_translate)
     df = pd.DataFrame(columns=["Mod"] + languages_translate)
     for mod in tmp:
