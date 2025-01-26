@@ -29,7 +29,7 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 
 |Language|czech|chinese|finnish|french|german|hungarian|italian|korean|polish|portuguese|russian|spanish|swedish|turkish|ukrainian|vietnamese|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Translated mods|$\color{red}{\textsf{62.0 \%}}$|$\color{red}{\textsf{49.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{5.0 \%}}$|$\color{red}{\textsf{32.0 \%}}$|$\color{red}{\textsf{3.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{54.0 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{41.0 \%}}$|$\color{red}{\textsf{3.0 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{7.0 \%}}$|$\color{red}{\textsf{1.0 \%}}$|
+|Translated mods|$\color{red}{\textsf{62.0 \%}}$|$\color{red}{\textsf{49.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{5.0 \%}}$|$\color{red}{\textsf{32.0 \%}}$|$\color{red}{\textsf{3.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{54.0 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{42.0 \%}}$|$\color{red}{\textsf{3.0 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{7.0 \%}}$|$\color{red}{\textsf{1.0 \%}}$|
 
 ## Mods translation details
 
@@ -94,7 +94,7 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 |[h3-campaigns-remade](https://github.com/vcmi-mods/h3-campaigns-remade)|||||||||||||||||
 |[zefix](https://github.com/vcmi-mods/zefix)|x||||||||x||||||||
 |[adventure-spells-pack](https://github.com/vcmi-mods/adventure-spells-pack)|x|x|||||||x||x||||||
-|[third-upgrades](https://github.com/vcmi-mods/third-upgrades)|||||||||||||||||
+|[third-upgrades](https://github.com/vcmi-mods/third-upgrades)|||||||||||x||||||
 |[mighty-heroes-iii](https://github.com/vcmi-mods/mighty-heroes-iii)|x|x|||x|x|||x||x||||x||
 |[erathian-font](https://github.com/vcmi-mods/erathian-font)|x||||||||||||||||
 |[kartenarchiv](https://github.com/vcmi-mods/kartenarchiv)|x|x|||x|x|||x||x||||x||
