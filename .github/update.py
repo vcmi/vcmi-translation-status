@@ -89,16 +89,69 @@ def get_translation_mods():
 def get_translation_mods_translation():
     translation_mods = get_translation_mods()
     data = {}
+
     for key, value in translation_mods.items():
+        print(f"\n--- Processing language: {key} ---")
         tmp = {}
+        chronicles_found = False
+
         for item in value[1]["translations"]:
             base_url = value[0].rsplit('/', 1)[0] + "/content/"
+            print(f"Checking base translation file: {base_url + item}")
+
             try:
                 tmp_str = urllib.request.urlopen(base_url + item).read()
-            except:
-                tmp_str = urllib.request.urlopen((base_url + item).replace("content", "Content").replace("config", "Config")).read()
-            tmp |= load_vcmi_json(tmp_str)
+            except Exception as e:
+                print(f"Error reading {base_url + item}: {e}")
+                continue
+
+            if "chronicles.json" in item:
+                print(f"Found chronicles.json in: {base_url + item}")
+                chronicles_data = load_vcmi_json(tmp_str)
+                prefixed_chronicles = {f"chronicles.{k}": v for k, v in chronicles_data.items()}
+                tmp |= prefixed_chronicles
+                chronicles_found = True
+            else:
+                tmp |= load_vcmi_json(tmp_str)
+
+        if not chronicles_found:
+            try:
+                repo_url_parts = value[0].split("/")
+                repo_owner = repo_url_parts[3]
+                repo_name = repo_url_parts[4]
+                branch_name = repo_url_parts[5]
+                api_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/git/trees/{branch_name}?recursive=1"
+
+                print(f"Fetching repo structure from: {api_url}")
+                response = urllib.request.urlopen(api_url).read()
+                repo_files = json5.loads(response)["tree"]
+
+                chronicles_json_files = [
+                    f["path"] for f in repo_files
+                    if "chronicles" in f["path"] 
+                    and f["path"].endswith(".json") 
+                    and "video" not in f["path"].lower() 
+                    and not f["path"].endswith("mod.json")
+                ]
+
+                print(f"Found chronicles JSON files: {chronicles_json_files}")
+
+                for json_file in chronicles_json_files:
+                    json_file_url = f"https://raw.githubusercontent.com/{repo_owner}/{repo_name}/{branch_name}/{json_file}"
+                    print(f"Fetching JSON file: {json_file_url}")
+
+                    try:
+                        tmp_str = urllib.request.urlopen(json_file_url).read()
+                        chronicles_data = load_vcmi_json(tmp_str)
+                        prefixed_chronicles = {f"chronicles.{k}": v for k, v in chronicles_data.items()}
+                        tmp |= prefixed_chronicles
+                    except Exception as e:
+                        print(f"Error reading JSON file {json_file_url}: {e}")
+            except Exception as e:
+                print(f"Error processing chronicles JSON files for {key}: {e}")
+
         data[key] = tmp
+
     return data
 
 def get_translation_mods_translation_assets():
@@ -132,7 +185,7 @@ def translation_mod_ratio(translation_mods_translation):
 
     for language in [key for key, value in translation_mods_translation.items() if key != "english"]:
         data_ns = {}
-        namespaces = [None, "map", "campaign"]
+        namespaces = [None, "map", "campaign", "chronicles"]
         for namespace in namespaces:
             translation = translation_mods_translation[language]
             count_equal = 0
@@ -186,12 +239,18 @@ def get_mod_translations(languages):
     for key, value in vcmi_mods.items():
         url = value["mod"].replace(" ", "%20")
         mod = load_vcmi_json(urllib.request.urlopen(url).read())
-        if "language" not in mod:
-            found_languages = []
-            for language in languages:
-                if language in mod:
-                    found_languages.append(language)
-            data[key] = found_languages
+        mod_name = mod.get("name", key)
+        mod_type = mod.get("modType", "unknown").lower()
+
+        if mod_type == "translation":
+            continue
+
+        found_languages = []
+        for language in languages:
+            if language in mod:
+                found_languages.append(language)
+
+        data[key] = {"name": mod_name, "modType": mod_type, "languages": found_languages}
     return data
 
 def create_md():
@@ -232,21 +291,25 @@ def create_md():
     md.new_table(columns=df.shape[1], rows=df.shape[0], text=df.to_numpy().flatten(), text_align='center')
 
     tmp = get_mod_translations(languages_translate)
-    mod_counts = {language: sum([1 for mods in tmp.values() if language in mods]) for language in languages_translate}
+    mod_counts = {language: sum(1 for mods in tmp.values() if language in mods["languages"]) for language in languages_translate}
     total_mods = len(tmp)
     percentages = [mod_counts[lang] / total_mods if total_mods > 0 else 0 for lang in languages_translate]
-
+    
     md.new_header(level=2, title="Mods translation status")
     header = ["Language"] + languages_translate
     values = ["Translated mods"] + [format_value(percent) for percent in percentages]
-
+    
     md.new_table(columns=len(header), rows=2, text=header + values, text_align='center')
 
     md.new_header(level=2, title="Mods translation details")
     tmp = get_mod_translations(languages_translate)
-    df = pd.DataFrame(columns=["Mod"] + languages_translate)
-    for mod in tmp:
-        df = pd.concat([df, pd.DataFrame({"Mod": "[" + mod + "](https://github.com/vcmi-mods/" + mod.replace(" ", "-") + ")"} | {x:["x" if x in tmp[mod] else ""] for x in languages_translate})], ignore_index=True)
+    df = pd.DataFrame(columns=["Mod", "Type"] + languages_translate)
+
+    for mod, mod_data in tmp.items():
+        df = pd.concat([df, pd.DataFrame({"Mod": "[" + mod_data["name"] + "](https://github.com/vcmi-mods/" + mod.replace(" ", "-") + ")", "Type": mod_data["modType"], **{x: ["x" if x in mod_data["languages"] else ""] for x in languages_translate}})], ignore_index=True)
+
+    df = df.sort_values(by=["Type", "Mod"])
+
     df = df.T.reset_index().T
     md.new_table(columns=df.shape[1], rows=df.shape[0], text=df.to_numpy().flatten(), text_align='center')
 
