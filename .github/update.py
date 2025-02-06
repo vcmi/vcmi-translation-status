@@ -89,22 +89,69 @@ def get_translation_mods():
 def get_translation_mods_translation():
     translation_mods = get_translation_mods()
     data = {}
+
     for key, value in translation_mods.items():
+        print(f"\n--- Processing language: {key} ---")
         tmp = {}
+        chronicles_found = False
+
         for item in value[1]["translations"]:
             base_url = value[0].rsplit('/', 1)[0] + "/content/"
+            print(f"Checking base translation file: {base_url + item}")
+
             try:
                 tmp_str = urllib.request.urlopen(base_url + item).read()
-            except:
-                tmp_str = urllib.request.urlopen((base_url + item).replace("content", "Content").replace("config", "Config")).read()
-            
+            except Exception as e:
+                print(f"Error reading {base_url + item}: {e}")
+                continue
+
             if "chronicles.json" in item:
+                print(f"Found chronicles.json in: {base_url + item}")
                 chronicles_data = load_vcmi_json(tmp_str)
                 prefixed_chronicles = {f"chronicles.{k}": v for k, v in chronicles_data.items()}
                 tmp |= prefixed_chronicles
+                chronicles_found = True
             else:
                 tmp |= load_vcmi_json(tmp_str)
+
+        if not chronicles_found:
+            try:
+                repo_url_parts = value[0].split("/")
+                repo_owner = repo_url_parts[3]
+                repo_name = repo_url_parts[4]
+                branch_name = repo_url_parts[5]
+                api_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/git/trees/{branch_name}?recursive=1"
+
+                print(f"Fetching repo structure from: {api_url}")
+                response = urllib.request.urlopen(api_url).read()
+                repo_files = json5.loads(response)["tree"]
+
+                chronicles_json_files = [
+                    f["path"] for f in repo_files
+                    if "chronicles" in f["path"] 
+                    and f["path"].endswith(".json") 
+                    and "video" not in f["path"].lower() 
+                    and not f["path"].endswith("mod.json")
+                ]
+
+                print(f"Found chronicles JSON files: {chronicles_json_files}")
+
+                for json_file in chronicles_json_files:
+                    json_file_url = f"https://raw.githubusercontent.com/{repo_owner}/{repo_name}/{branch_name}/{json_file}"
+                    print(f"Fetching JSON file: {json_file_url}")
+
+                    try:
+                        tmp_str = urllib.request.urlopen(json_file_url).read()
+                        chronicles_data = load_vcmi_json(tmp_str)
+                        prefixed_chronicles = {f"chronicles.{k}": v for k, v in chronicles_data.items()}
+                        tmp |= prefixed_chronicles
+                    except Exception as e:
+                        print(f"Error reading JSON file {json_file_url}: {e}")
+            except Exception as e:
+                print(f"Error processing chronicles JSON files for {key}: {e}")
+
         data[key] = tmp
+
     return data
 
 def get_translation_mods_translation_assets():
