@@ -30,7 +30,7 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 
 |Language|czech|chinese|finnish|french|german|hungarian|italian|korean|polish|portuguese|russian|spanish|swedish|turkish|ukrainian|vietnamese|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Translated mods|$\color{red}{\textsf{63.6 \%}}$|$\color{red}{\textsf{49.5 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{6.1 \%}}$|$\color{red}{\textsf{31.3 \%}}$|$\color{red}{\textsf{3.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{54.5 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{41.4 \%}}$|$\color{red}{\textsf{4.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{9.1 \%}}$|$\color{red}{\textsf{1.0 \%}}$|
+|Translated mods|$\color{red}{\textsf{63.6 \%}}$|$\color{red}{\textsf{48.5 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{6.1 \%}}$|$\color{red}{\textsf{31.3 \%}}$|$\color{red}{\textsf{3.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{54.5 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{41.4 \%}}$|$\color{red}{\textsf{4.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{10.1 \%}}$|$\color{red}{\textsf{1.0 \%}}$|
 
 ## Mods translation details
 
@@ -44,13 +44,13 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 |[Fused Artifacts](https://github.com/vcmi-mods/fused-artifacts)|artifacts|x||||||||x||||||||
 |[Moon Artifacts](https://github.com/vcmi-mods/moon-artifacts)|artifacts|x|x|||||||x||||||||
 |[Witchking artifacts](https://github.com/vcmi-mods/witchking-artifacts)|artifacts|x|x|||||||x||x||||||
+|[Equal Stats (Castlelizer)](https://github.com/vcmi-mods/equal-stats)|creatures|||||||||||||||||
 |[New Monsters Pack](https://github.com/vcmi-mods/new-monsters-pack)|creatures|x|x|||x||||x||x||||||
 |[Reworked Commanders](https://github.com/vcmi-mods/reworked-commanders)|creatures|x||||||||||||||||
 |[An's Expansion](https://github.com/vcmi-mods/an-expansion)|expansion||||||||||||||||x|
 |[Andruids Expansion Mods](https://github.com/vcmi-mods/andruids-expansion)|expansion|x|x|||||||x||x||||||
 |[Antagarich Burning - maps](https://github.com/vcmi-mods/ab-bad-ending-maps)|expansion|||||||||||||||||
 |[Antagarich Burning](https://github.com/vcmi-mods/ab-bad-ending-assets)|expansion|x|x|||||||x||x||||||
-|[Crossroads of Worlds](https://github.com/vcmi-mods/crossroads-of-worlds)|expansion||x|||||||||||||||
 |[H3Evo](https://github.com/vcmi-mods/h3Evo)|expansion|||||||||||||||||
 |[Horn of the Abyss](https://github.com/vcmi-mods/hota)|expansion|x|x|||x||||x||x|x|||x||
 |[In The Wake of Gods](https://github.com/vcmi-mods/wake-of-gods)|expansion|x|x|||x||||x||x|x|||x||
@@ -112,7 +112,7 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 |[warzyw-templates](https://github.com/vcmi-mods/warzyw-templates)|templates||x|||||||||||||||
 |[Adventure AI trace](https://github.com/vcmi-mods/ai-trace)|test|||||||||||||||||
 |[VCMI maps for AI testing](https://github.com/vcmi-mods/ai-testing-maps)|test|x||||||||||||||||
-|[Abyss town](https://github.com/vcmi-mods/abyss-town)|town|x|x||x|x||||x||x||||||
+|[Abyss town](https://github.com/vcmi-mods/abyss-town)|town|x|x||x|x||||x||x||||x||
 |[Ark-town](https://github.com/vcmi-mods/ark-town)|town|||||||||x||x||||||
 |[Asylum Town](https://github.com/vcmi-mods/asylum-town)|town||x|||x||||x||x||||||
 |[Cathedral Town](https://github.com/vcmi-mods/cathedral-town)|town|x|x||x|x||||x||x|x|||||
