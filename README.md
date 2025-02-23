@@ -9,11 +9,11 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 
 |Area|czech|chinese|finnish|french|german|hungarian|italian|korean|polish|portuguese|russian|spanish|swedish|turkish|ukrainian|vietnamese|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|[Main-Repo](https://github.com/vcmi/vcmi)|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{97.1 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{40.1 \%}}$|$\color{green}{\textsf{97.2 \%}}$|$\color{green}{\textsf{99.9 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{96.9 \%}}$|$\color{green}{\textsf{97.1 \%}}$|$\color{red}{\textsf{45.6 \%}}$|$\color{red}{\textsf{59.2 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{96.8 \%}}$|$\color{green}{\textsf{97.1 \%}}$|
+|[Main-Repo](https://github.com/vcmi/vcmi)|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{96.1 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{39.6 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{98.9 \%}}$|$\color{green}{\textsf{99.2 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{96.4 \%}}$|$\color{green}{\textsf{99.1 \%}}$|$\color{red}{\textsf{45.0 \%}}$|$\color{red}{\textsf{58.6 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{99.6 \%}}$|$\color{green}{\textsf{96.1 \%}}$|
 |[Mod-Repo](https://github.com/vcmi-mods) game|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{99.8 \%}}$|$\color{red}{\textsf{53.4 \%}}$|$\color{green}{\textsf{99.4 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{99.1 \%}}$|$\color{green}{\textsf{95.8 \%}}$|$\color{green}{\textsf{99.4 \%}}$|$\color{green}{\textsf{99.4 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{99.4 \%}}$|$\color{green}{\textsf{99.4 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{54.8 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|
 |[Mod-Repo](https://github.com/vcmi-mods) map|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{99.6 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{48.6 \%}}$|$\color{red}{\textsf{23.8 \%}}$|$\color{green}{\textsf{98.3 \%}}$|$\color{green}{\textsf{92.6 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{92.6 \%}}$|$\color{red}{\textsf{57.7 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{91.9 \%}}$|$\color{red}{\textsf{0.0 \%}}$|
 |[Mod-Repo](https://github.com/vcmi-mods) campaign|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{54.7 \%}}$|$\color{red}{\textsf{25.8 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{96.6 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{2.5 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{96.6 \%}}$|$\color{red}{\textsf{0.0 \%}}$|
-|[Mod-Repo](https://github.com/vcmi-mods) chronicles|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{99.8 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{99.8 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{99.8 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{99.8 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|
+|[Mod-Repo](https://github.com/vcmi-mods) chronicles|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{99.8 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{99.8 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{99.8 \%}}$|$\color{green}{\textsf{99.8 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{99.8 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|
 |[Mod-Repo](https://github.com/vcmi-mods) Assets: data|$\color{green}{\textsf{100.0 \%}}$|$\color{orange}{\textsf{85.7 \%}}$|$\color{red}{\textsf{7.1 \%}}$|$\color{green}{\textsf{92.9 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{orange}{\textsf{71.4 \%}}$|$\color{red}{\textsf{64.3 \%}}$|$\color{red}{\textsf{14.3 \%}}$|$\color{green}{\textsf{92.9 \%}}$|$\color{green}{\textsf{92.9 \%}}$|$\color{green}{\textsf{92.9 \%}}$|$\color{orange}{\textsf{78.6 \%}}$|$\color{red}{\textsf{7.1 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{92.9 \%}}$|$\color{orange}{\textsf{85.7 \%}}$|
 |[Mod-Repo](https://github.com/vcmi-mods) Assets: sounds|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{23.8 \%}}$|$\color{red}{\textsf{23.8 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{23.8 \%}}$|$\color{red}{\textsf{5.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|
 |[Mod-Repo](https://github.com/vcmi-mods) Assets: sprites|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{58.5 \%}}$|$\color{red}{\textsf{6.1 \%}}$|$\color{green}{\textsf{98.8 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{56.1 \%}}$|$\color{red}{\textsf{32.9 \%}}$|$\color{red}{\textsf{50.0 \%}}$|$\color{green}{\textsf{97.6 \%}}$|$\color{red}{\textsf{65.9 \%}}$|$\color{green}{\textsf{98.8 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{7.3 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{58.5 \%}}$|$\color{red}{\textsf{58.5 \%}}$|
@@ -23,14 +23,14 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 
 |Tool|czech|chinese|finnish|french|german|hungarian|italian|korean|polish|portuguese|russian|spanish|swedish|turkish|ukrainian|vietnamese|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|[mapeditor](https://github.com/vcmi/vcmi/tree/develop/mapeditor/translation)|$\color{green}{\textsf{100.0 \%}}$|$\color{orange}{\textsf{79.6 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{orange}{\textsf{72.4 \%}}$|$\color{green}{\textsf{99.1 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{99.1 \%}}$|$\color{orange}{\textsf{73.7 \%}}$|$\color{orange}{\textsf{79.4 \%}}$|$\color{green}{\textsf{99.1 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{31.0 \%}}$|$\color{red}{\textsf{26.3 \%}}$|
-|[launcher](https://github.com/vcmi/vcmi/tree/develop/launcher/translation)|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{98.2 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{62.7 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{98.2 \%}}$|$\color{green}{\textsf{98.5 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{39.4 \%}}$|
+|[mapeditor](https://github.com/vcmi/vcmi/tree/develop/mapeditor/translation)|$\color{green}{\textsf{100.0 \%}}$|$\color{orange}{\textsf{79.6 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{orange}{\textsf{72.4 \%}}$|$\color{green}{\textsf{99.1 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{99.1 \%}}$|$\color{green}{\textsf{98.9 \%}}$|$\color{orange}{\textsf{79.4 \%}}$|$\color{green}{\textsf{99.1 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{31.0 \%}}$|$\color{red}{\textsf{26.3 \%}}$|
+|[launcher](https://github.com/vcmi/vcmi/tree/develop/launcher/translation)|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{97.1 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{red}{\textsf{61.9 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{green}{\textsf{98.8 \%}}$|$\color{green}{\textsf{98.8 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{98.8 \%}}$|$\color{green}{\textsf{98.8 \%}}$|$\color{green}{\textsf{97.3 \%}}$|$\color{green}{\textsf{98.8 \%}}$|$\color{green}{\textsf{98.8 \%}}$|$\color{red}{\textsf{0 \%}}$|$\color{green}{\textsf{100.0 \%}}$|$\color{orange}{\textsf{84.1 \%}}$|
 
 ## Mods translation status
 
 |Language|czech|chinese|finnish|french|german|hungarian|italian|korean|polish|portuguese|russian|spanish|swedish|turkish|ukrainian|vietnamese|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Translated mods|$\color{red}{\textsf{63.6 \%}}$|$\color{red}{\textsf{48.5 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{6.1 \%}}$|$\color{red}{\textsf{31.3 \%}}$|$\color{red}{\textsf{3.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{54.5 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{41.4 \%}}$|$\color{red}{\textsf{4.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{10.1 \%}}$|$\color{red}{\textsf{1.0 \%}}$|
+|Translated mods|$\color{red}{\textsf{63.0 \%}}$|$\color{red}{\textsf{49.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{7.0 \%}}$|$\color{red}{\textsf{31.0 \%}}$|$\color{red}{\textsf{3.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{54.0 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{43.0 \%}}$|$\color{red}{\textsf{4.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{10.0 \%}}$|$\color{red}{\textsf{1.0 \%}}$|
 
 ## Mods translation details
 
@@ -70,7 +70,7 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 |[Campaign Heroes](https://github.com/vcmi-mods/campaign-heroes)|heroes|x|x|||x||||x||x||||||
 |[Immortal cultivation heroes](https://github.com/vcmi-mods/immortal-cultivation-heroes)|heroes||x|||||||||||||||
 |[Neutral Heroes](https://github.com/vcmi-mods/neutral-heroes)|heroes|x|x|||x||||x||x||||||
-|[New Old Heroes](https://github.com/vcmi-mods/new-old-heroes)|heroes|x||||||||x||||||||
+|[New Old Heroes](https://github.com/vcmi-mods/new-old-heroes)|heroes|x||||||||x||x||||||
 |[Phoenix as a dream](https://github.com/vcmi-mods/phoenix-as-a-dream)|heroes|x|x|||||||x||||||||
 |[Tarnum is back!](https://github.com/vcmi-mods/tarnum)|heroes|x|x|||x||||x||||||||
 |[Heroes-o-pedia](https://github.com/vcmi-mods/heroes-o-pedia)|interface|||||||||||||||||
@@ -79,12 +79,13 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 |[Medusas are the best girls](https://github.com/vcmi-mods/medusa-mod)|interface|||||||||x||x||||||
 |[New-style Interface](https://github.com/vcmi-mods/new-interface-mod)|interface|x||||||||||||||||
 |[A Song of Ice & Fire](https://github.com/vcmi-mods/a-song-of-ice-and-fire)|maps|x|x|||x|x|||x||x||||x||
-|[Campaings pack](https://github.com/vcmi-mods/campaings-pack)|maps|||||||||||||||||
+|[Campaigns pack](https://github.com/vcmi-mods/campaings-pack)|maps|||||||||||||||||
 |[Czech Map Pack](https://github.com/vcmi-mods/czech-map-pack)|maps|||||||||||||||||
 |[Dydzio's Map Pack](https://github.com/vcmi-mods/dydzios-map-pack)|maps|x||||||||||||||||
 |[German Map Pack](https://github.com/vcmi-mods/kartenarchiv)|maps|x|x|||x|x|||x||x||||x||
 |[Heroes Chronicles Enhanced](https://github.com/vcmi-mods/chronicles-enhanced)|maps|x||||||||x||||||||
 |[HoMM3 Campaigns remade](https://github.com/vcmi-mods/h3-campaigns-remade)|maps|||||||||||||||||
+|[Maps Collection](https://github.com/vcmi-mods/chinese-maps-collection)|maps||x|||||||||||||||
 |[Mighty Heroes III](https://github.com/vcmi-mods/mighty-heroes-iii)|maps|x|x|||x|x|||x||x||||x||
 |[Creatures' Hidden Potential](https://github.com/vcmi-mods/creatures-hidden-potential)|mechanics|x||||||||||||||||
 |[Invite hero](https://github.com/vcmi-mods/tavern-invite)|mechanics|x|x|||x||||||||||||
@@ -127,11 +128,11 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 |[Grove town (Trith edition)](https://github.com/vcmi-mods/grove)|town||x||x|x||||x||x||||||
 |[Haven](https://github.com/vcmi-mods/haven-town)|town|x|x|||x||||x||x||||||
 |[Heavenly Forge 2000](https://github.com/vcmi-mods/forge2k)|town||x|||x||||x||x||||x||
-|[Highlands Town](https://github.com/vcmi-mods/highlands-town)|town||x|||x||||x||x||||||
-|[Kremlin town](https://github.com/vcmi-mods/kremlin-town)|town||x|||||||x||||||||
+|[Highlands Town](https://github.com/vcmi-mods/highlands-town)|town||x||x|x||||x||x||||||
+|[Kremlin town](https://github.com/vcmi-mods/kremlin-town)|town||x|||||||x||x||||||
 |[Pavilion Town](https://github.com/vcmi-mods/new-pavilion)|town|x|x||x|x||||x|x|x||||||
 |[Preserve Town](https://github.com/vcmi-mods/preserve-town)|town||x|||x||||x||x||||||
-|[Refugee Town](https://github.com/vcmi-mods/refugee-town)|town||x||x|x||||x||x||||||
+|[Refugee Town (Refuge)](https://github.com/vcmi-mods/refugee-town)|town||x||x|x||||x||x||||||
 |[Retreat](https://github.com/vcmi-mods/retreat-town)|town||x||x|x||||x||x||||||
 |[Ruins Town](https://github.com/vcmi-mods/ruins-town)|town|x|x|||x||||x||x||||||
 |[Tartarus Town](https://github.com/vcmi-mods/tartarus-town)|town||x|||x||||x||x||||||
