@@ -71,7 +71,7 @@ def get_mod_repo():
     settings_schema = load_vcmi_json(urllib.request.urlopen("https://raw.githubusercontent.com/vcmi/vcmi/develop/config/schemas/settings.json").read())
     vcmi_mod_url = settings_schema["properties"]["launcher"]["properties"]["defaultRepositoryURL"]["default"]
     vcmi_mods = load_vcmi_json(urllib.request.urlopen(vcmi_mod_url).read())
-    return vcmi_mods
+    return vcmi_mods["availableMods"]
 
 def get_translation_mods():
     vcmi_translation_mods = {}
