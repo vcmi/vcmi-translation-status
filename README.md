@@ -30,7 +30,7 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 
 |Language|bulgarian|czech|chinese|finnish|french|german|greek|hungarian|italian|japanese|korean|polish|portuguese|romanian|russian|spanish|swedish|norwegian|turkish|ukrainian|vietnamese|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Translated mods|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{62.7 \%}}$|$\color{red}{\textsf{48.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{6.9 \%}}$|$\color{red}{\textsf{30.4 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{2.9 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{53.9 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{42.2 \%}}$|$\color{red}{\textsf{3.9 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{10.8 \%}}$|$\color{red}{\textsf{1.0 \%}}$|
+|Translated mods|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{62.7 \%}}$|$\color{red}{\textsf{48.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{6.9 \%}}$|$\color{red}{\textsf{30.4 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{2.9 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{53.9 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{42.2 \%}}$|$\color{red}{\textsf{3.9 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{11.8 \%}}$|$\color{red}{\textsf{1.0 \%}}$|
 
 ## Mods translation details
 
@@ -54,7 +54,7 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 |[H3Evo](https://github.com/vcmi-mods/h3Evo)|expansion||||||||||||||||||||||
 |[Horn of the Abyss](https://github.com/vcmi-mods/hota)|expansion||x|x|||x||||||x|||x|x||||x||
 |[In The Wake of Gods](https://github.com/vcmi-mods/wake-of-gods)|expansion||x|x|||x||||||x|||x|x||||x||
-|[PvP Balance](https://github.com/vcmi-mods/pvp-balance)|expansion||||||||||||||||||||||
+|[PvP Balance](https://github.com/vcmi-mods/pvp-balance)|expansion||||||||||||||||||||x||
 |[Third Upgrades Mod](https://github.com/vcmi-mods/third-upgrades)|expansion|||x||||||||||||x|||||||
 |[Tides of War](https://github.com/vcmi-mods/tides-of-war)|expansion||x|x|||x||||||x|||x|x||||x||
 |[Alternative town screens](https://github.com/vcmi-mods/alternate-townscreens)|graphical||x||||||||||||||||||||
