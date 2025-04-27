@@ -30,7 +30,7 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 
 |Language|belarusian|bulgarian|czech|chinese|finnish|french|german|greek|hungarian|italian|japanese|korean|polish|portuguese|romanian|russian|spanish|swedish|norwegian|turkish|ukrainian|vietnamese|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Translated mods|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{63.1 \%}}$|$\color{red}{\textsf{48.5 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{6.8 \%}}$|$\color{red}{\textsf{30.1 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{2.9 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{55.3 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{43.7 \%}}$|$\color{red}{\textsf{3.9 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{11.7 \%}}$|$\color{red}{\textsf{1.0 \%}}$|
+|Translated mods|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{63.1 \%}}$|$\color{red}{\textsf{49.5 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{6.8 \%}}$|$\color{red}{\textsf{30.1 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{2.9 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{55.3 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{43.7 \%}}$|$\color{red}{\textsf{3.9 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{11.7 \%}}$|$\color{red}{\textsf{1.0 \%}}$|
 
 ## Mods translation details
 
@@ -117,7 +117,7 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 |[Adventure AI trace](https://github.com/vcmi-mods/ai-trace)|test|||||||||||||||||||||||
 |[VCMI maps for AI testing](https://github.com/vcmi-mods/ai-testing-maps)|test|||x||||||||||||||||||||
 |[Abyss town](https://github.com/vcmi-mods/abyss-town)|town|||x|x||x|x||||||x|||x|||||x||
-|[Ark-town](https://github.com/vcmi-mods/ark-town)|town|||||||||||||x|||x|||||||
+|[Ark-town](https://github.com/vcmi-mods/ark-town)|town||||x|||||||||x|||x|||||||
 |[Asylum Town](https://github.com/vcmi-mods/asylum-town)|town||||x|||x||||||x|||x|||||||
 |[Cathedral Town](https://github.com/vcmi-mods/cathedral-town)|town|||x|x||x|x||||||x|||x|x||||||
 |[Cetatea](https://github.com/vcmi-mods/cetatea-town)|town||||x|||x||||||x|||x|||||||
