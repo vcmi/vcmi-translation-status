@@ -224,9 +224,13 @@ def get_qt_translations(languages):
                         translator_comment = item_message.find('translatorcomment')
                         translation = item_message.find('translation')
 
-                        if translation is not None and (
-                            translation.get("type") is None or
-                            (translator_comment is not None and "AI-generated" in translator_comment.text)
+                        if (
+                            translation is not None
+                            and (
+                                translation.get("type") is None
+                                or (translator_comment is not None and "AI-generated" in translator_comment.text)
+                                or (translation.text is not None and translation.text.strip() != "")
+                            )
                         ):
                             count_translated += 1
                         else:
