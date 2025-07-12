@@ -208,7 +208,7 @@ def translation_mod_ratio(translation_mods_translation):
 def get_qt_translations(languages):
     data = {}
 
-    for language in [key for key, value in base_mod_existing(languages).items() if value == True]:
+    for language in get_languages():
         data_type = {}
         for type in ["mapeditor", "launcher"]:
             count_translated = 0
