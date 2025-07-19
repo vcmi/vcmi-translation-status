@@ -208,7 +208,7 @@ def translation_mod_ratio(translation_mods_translation):
 def get_qt_translations(languages):
     data = {}
 
-    for language in [key for key, value in base_mod_existing(languages).items() if value == True]:
+    for language in get_languages():
         data_type = {}
         for type in ["mapeditor", "launcher"]:
             count_translated = 0
@@ -221,7 +221,17 @@ def get_qt_translations(languages):
                 root = ET.fromstring(tmp_str)
                 for item_context in root.iter('context'):
                     for item_message in item_context.iter('message'):
-                        if list(item_message.iter('translation'))[0].get("type") == None:
+                        translator_comment = item_message.find('translatorcomment')
+                        translation = item_message.find('translation')
+
+                        if (
+                            translation is not None
+                            and (
+                                translation.get("type") is None
+                                or (translator_comment is not None and "AI-generated" in translator_comment.text)
+                                or (translation.text is not None and translation.text.strip() != "")
+                            )
+                        ):
                             count_translated += 1
                         else:
                             count_untranslated += 1
