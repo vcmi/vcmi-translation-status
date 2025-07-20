@@ -30,7 +30,7 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 
 |Language|belarusian|bulgarian|czech|chinese|finnish|french|german|greek|hungarian|italian|japanese|korean|polish|portuguese|romanian|russian|spanish|swedish|norwegian|turkish|ukrainian|vietnamese|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Translated mods|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{63.8 \%}}$|$\color{red}{\textsf{47.6 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{7.6 \%}}$|$\color{red}{\textsf{31.4 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{2.9 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{58.1 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{46.7 \%}}$|$\color{red}{\textsf{3.8 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{13.3 \%}}$|$\color{red}{\textsf{1.0 \%}}$|
+|Translated mods|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{64.8 \%}}$|$\color{red}{\textsf{47.6 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{7.6 \%}}$|$\color{red}{\textsf{31.4 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{2.9 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{58.1 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{46.7 \%}}$|$\color{red}{\textsf{3.8 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{13.3 \%}}$|$\color{red}{\textsf{1.0 \%}}$|
 
 ## Mods translation details
 
@@ -58,7 +58,7 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 |[Third Upgrades Mod](https://github.com/vcmi-mods/third-upgrades)|expansion||||x||||||||||||x|||||||
 |[Tides of War](https://github.com/vcmi-mods/tides-of-war)|expansion|||x|x|||x||||||x|||x|x||||x||
 |[Alternative town screens](https://github.com/vcmi-mods/alternate-townscreens)|graphical|||x||||||||||||||||||||
-|[Diverse Battlefields](https://github.com/vcmi-mods/diverse-battlefields)|graphical|||||||||||||x||||||||||
+|[Diverse Battlefields](https://github.com/vcmi-mods/diverse-battlefields)|graphical|||x||||||||||x||||||||||
 |[Ensrick's Portrait Pack](https://github.com/vcmi-mods/ensrick-portraits)|graphical|||x||||||||||||||||||||
 |[Erathian font [read description!]](https://github.com/vcmi-mods/erathian-font)|graphical|||x||||||||||||||||||||
 |[Hero movement arrows](https://github.com/vcmi-mods/movement-arrows)|graphical|||x||||||||||||||||||||
