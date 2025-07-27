@@ -30,7 +30,7 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 
 |Language|belarusian|bulgarian|czech|chinese|finnish|french|german|greek|hungarian|italian|japanese|korean|polish|portuguese|romanian|russian|spanish|swedish|norwegian|turkish|ukrainian|vietnamese|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Translated mods|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{64.8 \%}}$|$\color{red}{\textsf{47.6 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{7.6 \%}}$|$\color{red}{\textsf{31.4 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{2.9 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{58.1 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{46.7 \%}}$|$\color{red}{\textsf{3.8 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{13.3 \%}}$|$\color{red}{\textsf{1.0 \%}}$|
+|Translated mods|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{65.7 \%}}$|$\color{red}{\textsf{47.6 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{7.6 \%}}$|$\color{red}{\textsf{31.4 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{2.9 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{58.1 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{46.7 \%}}$|$\color{red}{\textsf{3.8 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{13.3 \%}}$|$\color{red}{\textsf{1.0 \%}}$|
 
 ## Mods translation details
 
@@ -109,7 +109,7 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 |[PAH3 Singleplayer Tournament](https://github.com/vcmi-mods/pah3-singleplayer-tournament)|other|||||||||||||||||||||||
 |[Simple Game Balance](https://github.com/vcmi-mods/ultimate-balance)|other|||||||||||||||||||||||
 |[ZEfix](https://github.com/vcmi-mods/zefix)|other|||x||||||||||x||||||||||
-|[New Skills Pack](https://github.com/vcmi-mods/new-skills-pack)|skills|||||||||||||x|||x|||||||
+|[New Skills Pack](https://github.com/vcmi-mods/new-skills-pack)|skills|||x||||||||||x|||x|||||||
 |[Adventure Map Spells](https://github.com/vcmi-mods/adventure-spells-pack)|spells|||x|x|||||||||x|||x|||||||
 |[New Magic Balance](https://github.com/vcmi-mods/andruids-spell-balance)|spells|||x||||||||||||||||||||
 |[New Summoning Spells](https://github.com/vcmi-mods/new-summon-spells)|spells|||x|x|||||||||x|||x|||||||
