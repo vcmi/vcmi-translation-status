@@ -7,6 +7,37 @@ from mdutils.mdutils import MdUtils
 import pandas as pd
 import defusedxml.ElementTree as ET
 
+# Global headers for all urllib requests using GITHUB_TOKEN if present
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+_DEFAULT_HEADERS = {"User-Agent": "github-translation-script"}
+if GITHUB_TOKEN:
+    _DEFAULT_HEADERS["Authorization"] = f"Bearer {GITHUB_TOKEN}"
+
+# Monkeypatch urllib.request.urlopen so every request includes default headers
+_orig_urlopen = urllib.request.urlopen
+
+def _patched_urlopen(url, *args, **kwargs):
+    try:
+        if isinstance(url, urllib.request.Request):
+            req = url
+        else:
+            req = urllib.request.Request(url)
+
+        # Try to obtain existing headers in a robust way
+        try:
+            existing = dict(req.header_items())
+        except Exception:
+            existing = dict(getattr(req, 'headers', {}) or {})
+
+        for k, v in _DEFAULT_HEADERS.items():
+            if k not in existing:
+                req.add_header(k, v)
+    except Exception:
+        return _orig_urlopen(url, *args, **kwargs)
+    return _orig_urlopen(req, *args, **kwargs)
+
+urllib.request.urlopen = _patched_urlopen
+
 # https://stackoverflow.com/a/18381470 (Onur Yıldırım, CC BY-SA 4.0)
 def remove_comments(string):
     pattern = r"(\".*?\"|\'.*?\')|(/\*.*?\*/|//[^\r\n]*$)"
