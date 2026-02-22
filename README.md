@@ -30,7 +30,7 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 
 |Language|belarusian|bulgarian|czech|chinese|dutch|filipino|finnish|french|german|greek|hungarian|italian|japanese|korean|latvian|norwegian|polish|portuguese|romanian|russian|serbian|spanish|swedish|turkish|ukrainian|vietnamese|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Translated mods|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{66.7 \%}}$|$\color{red}{\textsf{52.4 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{9.5 \%}}$|$\color{red}{\textsf{32.4 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{4.8 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{60.0 \%}}$|$\color{red}{\textsf{3.8 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{47.6 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{3.8 \%}}$|$\color{red}{\textsf{1.0 \%}}$|$\color{red}{\textsf{4.8 \%}}$|$\color{red}{\textsf{14.3 \%}}$|$\color{red}{\textsf{0.0 \%}}$|
+|Translated mods|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{66.0 \%}}$|$\color{red}{\textsf{51.9 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{9.4 \%}}$|$\color{red}{\textsf{32.1 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{4.7 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{59.4 \%}}$|$\color{red}{\textsf{3.8 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{47.2 \%}}$|$\color{red}{\textsf{0.0 \%}}$|$\color{red}{\textsf{3.8 \%}}$|$\color{red}{\textsf{0.9 \%}}$|$\color{red}{\textsf{4.7 \%}}$|$\color{red}{\textsf{14.2 \%}}$|$\color{red}{\textsf{0.0 \%}}$|
 
 ## Mods translation details
 
@@ -58,6 +58,7 @@ This tables shows the current translation progress of VCMI. See [here](https://v
 |[The Great Expansion](https://github.com/vcmi-mods/the-great-expansion)|expansion|||||||||||||||||x||||||||||
 |[Third Upgrades Mod](https://github.com/vcmi-mods/third-upgrades)|expansion||||x||||||||||||||||x|||||||
 |[Tides of War](https://github.com/vcmi-mods/tides-of-war)|expansion|||x|x|||||x||x||||||x|||x||x||x|x||
+|[the lost tales](https://github.com/vcmi-mods/the-lost-tales)|expansion|||||||||||||||||||||||||||
 |[Alternative town screens](https://github.com/vcmi-mods/alternate-townscreens)|graphical|||x||||||||||||||||||||||||
 |[Diverse Battlefields](https://github.com/vcmi-mods/diverse-battlefields)|graphical|||x||||||||||||||x||||||||||
 |[Ensrick's Portrait Pack](https://github.com/vcmi-mods/ensrick-portraits)|graphical|||x|x|||||x||x||||||x|||x|||x||x||
